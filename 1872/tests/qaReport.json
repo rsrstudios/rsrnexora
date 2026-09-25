@@ -1,0 +1,1054 @@
+{
+  "version": "5.0.0",
+  "generatedAt": "2026-09-23T14:41:21.182Z",
+  "totalDurationMs": 110423,
+  "releaseGatePassed": true,
+  "statistics": {
+    "totalSuites": 21,
+    "totalTests": 138,
+    "passed": 138,
+    "failed": 0
+  },
+  "criticalVulnerabilitiesFound": 0,
+  "unresolvedBlockers": 0,
+  "suites": [
+    {
+      "name": "Unit: Authentication & Cryptography",
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 329,
+      "tests": [
+        {
+          "suite": "Unit: Authentication & Cryptography",
+          "name": "should generate a 16-byte random salt and hash password with scrypt",
+          "status": "passed",
+          "durationMs": 65
+        },
+        {
+          "suite": "Unit: Authentication & Cryptography",
+          "name": "should verify correct password using timing-safe comparison",
+          "status": "passed",
+          "durationMs": 137
+        },
+        {
+          "suite": "Unit: Authentication & Cryptography",
+          "name": "should reject incorrect password safely without timing attack leakage",
+          "status": "passed",
+          "durationMs": 126
+        },
+        {
+          "suite": "Unit: Authentication & Cryptography",
+          "name": "should generate cryptographically strong tokens with high entropy",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Authentication & Cryptography",
+          "name": "should generate prefixed secure IDs with timestamp and entropy",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Authentication & Cryptography",
+          "name": "should enforce strong password complexity requirements",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Authentication & Cryptography",
+          "name": "should strictly validate email addresses against malformed inputs",
+          "status": "passed",
+          "durationMs": 1
+        }
+      ]
+    },
+    {
+      "name": "Unit: Sanitization & Path Traversal Prevention",
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 1,
+      "tests": [
+        {
+          "suite": "Unit: Sanitization & Path Traversal Prevention",
+          "name": "should strip directory traversal sequences from filenames",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Sanitization & Path Traversal Prevention",
+          "name": "should strip dangerous shell characters and control bytes from filenames",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Sanitization & Path Traversal Prevention",
+          "name": "should provide safe fallback for empty or completely stripped filenames",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Sanitization & Path Traversal Prevention",
+          "name": "should generate collision-resistant storage filenames",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Sanitization & Path Traversal Prevention",
+          "name": "should enforce maximum length bounds and strip control codes on untrusted text",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Sanitization & Path Traversal Prevention",
+          "name": "should neutralize dangerous script and iframe HTML tags",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Sanitization & Path Traversal Prevention",
+          "name": "should prevent open redirect vulnerabilities",
+          "status": "passed",
+          "durationMs": 1
+        }
+      ]
+    },
+    {
+      "name": "Unit: Prompt Defense & Injection Isolation",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 0,
+      "tests": [
+        {
+          "suite": "Unit: Prompt Defense & Injection Isolation",
+          "name": "should define an immutable 4-tier trust hierarchy in system defense prompt",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Prompt Defense & Injection Isolation",
+          "name": "should enclose untrusted file attachments inside security boundaries",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Prompt Defense & Injection Isolation",
+          "name": "should sanitize tags and delimiters in attachment names",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Prompt Defense & Injection Isolation",
+          "name": "should enclose external web snippets inside untrusted web boundaries",
+          "status": "passed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "Unit: Database Layer & Data Isolation",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 1943,
+      "tests": [
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should register a user and automatically provision their default workspace",
+          "status": "passed",
+          "durationMs": 1098
+        },
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should prevent duplicate user registration with same email",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should create a second user with distinct credentials and workspace",
+          "status": "passed",
+          "durationMs": 519
+        },
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should enforce strict workspace isolation (User 2 cannot access User 1 workspace)",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should protect default workspace from deletion",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should create and isolate conversations between users",
+          "status": "passed",
+          "durationMs": 1
+        },
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should create and isolate user memories",
+          "status": "passed",
+          "durationMs": 325
+        },
+        {
+          "suite": "Unit: Database Layer & Data Isolation",
+          "name": "should export only the authenticated user's own data in backup archive",
+          "status": "passed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "Unit: Export & Document Formatting Utilities",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 0,
+      "tests": [
+        {
+          "suite": "Unit: Export & Document Formatting Utilities",
+          "name": "should generate clean, safe filesystem slug from conversation titles",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Export & Document Formatting Utilities",
+          "name": "should safely escape HTML entities to prevent injection in exported transcripts",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Export & Document Formatting Utilities",
+          "name": "should produce a structured Markdown document from conversation model",
+          "status": "passed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "Unit: Theme Resolution & Accessibility Mode",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 0,
+      "tests": [
+        {
+          "suite": "Unit: Theme Resolution & Accessibility Mode",
+          "name": "should resolve explicit light and dark themes regardless of system state",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Theme Resolution & Accessibility Mode",
+          "name": "should accurately reflect system preferences when theme is set to 'system'",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Unit: Theme Resolution & Accessibility Mode",
+          "name": "should maintain valid neutral theme storage tokens",
+          "status": "passed",
+          "durationMs": 0
+        }
+      ]
+    },
+    {
+      "name": "Integration: Health Check & Security Posture Headers",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 8,
+      "tests": [
+        {
+          "suite": "Integration: Health Check & Security Posture Headers",
+          "name": "GET /api/health - should return valid status, v5.0 version, and capabilities",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Health Check & Security Posture Headers",
+          "name": "Security Headers - should include hardened HTTP protection headers on all responses",
+          "status": "passed",
+          "durationMs": 4
+        }
+      ]
+    },
+    {
+      "name": "Integration: Authentication & Session Endpoints",
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 1114,
+      "tests": [
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "POST /api/auth/register - should create user and set secure session cookie",
+          "status": "passed",
+          "durationMs": 617
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "POST /api/auth/register - should reject duplicate email with 409 Conflict",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "POST /api/auth/register - should reject invalid email format with 400 Bad Request",
+          "status": "passed",
+          "durationMs": 6
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "POST /api/auth/register - should reject weak password with 400 Bad Request",
+          "status": "passed",
+          "durationMs": 6
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "POST /api/auth/login - should authenticate with valid credentials",
+          "status": "passed",
+          "durationMs": 66
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "POST /api/auth/login - should reject invalid credentials with 401 Unauthorized",
+          "status": "passed",
+          "durationMs": 69
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "GET /api/auth/session - should return session data when authenticated",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "GET /api/auth/session - should return 401 when no session cookie present",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Authentication & Session Endpoints",
+          "name": "POST /api/auth/logout - should invalidate session and clear cookie",
+          "status": "passed",
+          "durationMs": 336
+        }
+      ]
+    },
+    {
+      "name": "Integration: Focused Account Creation & Sign-up System",
+      "total": 11,
+      "passed": 11,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 1177,
+      "tests": [
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "1. Successful Registration - creates user, hashes password, sets session cookie, returns sanitized user",
+          "status": "passed",
+          "durationMs": 376
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "2. Duplicate Email - rejects registration of identical email with 409 Conflict",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "3. Invalid Email Format - rejects malformed emails with 400 Bad Request",
+          "status": "passed",
+          "durationMs": 12
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "4. Missing Fields - rejects registration when required fields are missing",
+          "status": "passed",
+          "durationMs": 6
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "5. Password Mismatch - rejects registration when confirmPassword does not match password",
+          "status": "passed",
+          "durationMs": 3
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "6. Weak Password - rejects passwords shorter than 8 characters",
+          "status": "passed",
+          "durationMs": 3
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "7. Login after Registration - newly created account can authenticate via POST /api/auth/login",
+          "status": "passed",
+          "durationMs": 64
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "8. Session Persistence - GET /api/auth/me and GET /api/auth/session restore session",
+          "status": "passed",
+          "durationMs": 10
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "9. Post-Registration Compatibility - newly registered account can access chat, workspaces, memories, usage, subscriptions",
+          "status": "passed",
+          "durationMs": 121
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "10. Logout - POST /api/auth/logout invalidates session and clears cookie",
+          "status": "passed",
+          "durationMs": 480
+        },
+        {
+          "suite": "Integration: Focused Account Creation & Sign-up System",
+          "name": "11. Supabase Persistence - user record is persisted in Supabase database and retrievable",
+          "status": "passed",
+          "durationMs": 98
+        }
+      ]
+    },
+    {
+      "name": "Integration: AI Chat & Streaming Endpoints",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 30,
+      "tests": [
+        {
+          "suite": "Integration: AI Chat & Streaming Endpoints",
+          "name": "POST /api/chat - should reject empty or missing messages array with 400 Bad Request",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: AI Chat & Streaming Endpoints",
+          "name": "POST /api/chat - should reject messages exceeding character safety limits",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: AI Chat & Streaming Endpoints",
+          "name": "POST /api/chat/stream - should return SSE headers for valid streaming request",
+          "status": "passed",
+          "durationMs": 21
+        }
+      ]
+    },
+    {
+      "name": "Integration: File Upload & Document Endpoints",
+      "total": 7,
+      "passed": 7,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 36,
+      "tests": [
+        {
+          "suite": "Integration: File Upload & Document Endpoints",
+          "name": "POST /api/files/upload - should safely accept and store allowed documents",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: File Upload & Document Endpoints",
+          "name": "POST /api/files/upload - should strictly block executable files (.exe, .sh, .bat)",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: File Upload & Document Endpoints",
+          "name": "POST /api/files/upload - should sanitize path traversal in filenames",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: File Upload & Document Endpoints",
+          "name": "GET /api/files/:filename - should retrieve stored file content",
+          "status": "passed",
+          "durationMs": 9
+        },
+        {
+          "suite": "Integration: File Upload & Document Endpoints",
+          "name": "GET /api/files/:filename - should return 404 for non-existent file",
+          "status": "passed",
+          "durationMs": 3
+        },
+        {
+          "suite": "Integration: File Upload & Document Endpoints",
+          "name": "GET /api/files/:filename - should neutralize path traversal attempts",
+          "status": "passed",
+          "durationMs": 2
+        },
+        {
+          "suite": "Integration: File Upload & Document Endpoints",
+          "name": "POST /api/files/extract - should parse document intelligence and extract headings",
+          "status": "passed",
+          "durationMs": 7
+        }
+      ]
+    },
+    {
+      "name": "Integration: Workspaces & Authorization Isolation",
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 912,
+      "tests": [
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "setup User 1 session",
+          "status": "passed",
+          "durationMs": 528
+        },
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "setup User 2 session",
+          "status": "passed",
+          "durationMs": 349
+        },
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "GET /api/workspaces - should list default workspace for authenticated user",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "POST /api/workspaces - should create custom workspace",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "PATCH /api/workspaces/:id - should update workspace metadata",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "AUTHORIZATION: User 2 cannot access or modify User 1 workspace",
+          "status": "passed",
+          "durationMs": 8
+        },
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "DELETE /api/workspaces/:id - should reject deletion of default workspace",
+          "status": "passed",
+          "durationMs": 12
+        },
+        {
+          "suite": "Integration: Workspaces & Authorization Isolation",
+          "name": "DELETE /api/workspaces/:id - should delete custom workspace",
+          "status": "passed",
+          "durationMs": 2
+        }
+      ]
+    },
+    {
+      "name": "Integration: Memory Management & Authorization Isolation",
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 994,
+      "tests": [
+        {
+          "suite": "Integration: Memory Management & Authorization Isolation",
+          "name": "setup user sessions for memory testing",
+          "status": "passed",
+          "durationMs": 879
+        },
+        {
+          "suite": "Integration: Memory Management & Authorization Isolation",
+          "name": "POST /api/memories - should create explicit memory item",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: Memory Management & Authorization Isolation",
+          "name": "GET /api/memories - should list only the authenticated user's memories",
+          "status": "passed",
+          "durationMs": 103
+        },
+        {
+          "suite": "Integration: Memory Management & Authorization Isolation",
+          "name": "AUTHORIZATION: User 2 cannot delete User 1 memory",
+          "status": "passed",
+          "durationMs": 3
+        },
+        {
+          "suite": "Integration: Memory Management & Authorization Isolation",
+          "name": "DELETE /api/memories/:id - should delete memory item for authorized owner",
+          "status": "passed",
+          "durationMs": 4
+        }
+      ]
+    },
+    {
+      "name": "Integration: Backup Export, Import & Isolation",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 531,
+      "tests": [
+        {
+          "suite": "Integration: Backup Export, Import & Isolation",
+          "name": "setup user session for backup testing",
+          "status": "passed",
+          "durationMs": 327
+        },
+        {
+          "suite": "Integration: Backup Export, Import & Isolation",
+          "name": "GET /api/backup/export - should generate complete and valid JSON backup",
+          "status": "passed",
+          "durationMs": 193
+        },
+        {
+          "suite": "Integration: Backup Export, Import & Isolation",
+          "name": "POST /api/backup/import - should restore valid backup archive",
+          "status": "passed",
+          "durationMs": 7
+        },
+        {
+          "suite": "Integration: Backup Export, Import & Isolation",
+          "name": "POST /api/backup/import - should safely reject malformed or corrupted archive with 400 Bad Request",
+          "status": "passed",
+          "durationMs": 4
+        }
+      ]
+    },
+    {
+      "name": "Integration: Search Grounding & Image Generation Endpoints",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 267,
+      "tests": [
+        {
+          "suite": "Integration: Search Grounding & Image Generation Endpoints",
+          "name": "POST /api/search - should reject missing or empty search query with 400 Bad Request",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Search Grounding & Image Generation Endpoints",
+          "name": "POST /api/image/generate - should reject empty prompt with 400 Bad Request",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Search Grounding & Image Generation Endpoints",
+          "name": "POST /api/image/generate - should normalize invalid aspect ratios to 1:1 safely",
+          "status": "passed",
+          "durationMs": 259
+        }
+      ]
+    },
+    {
+      "name": "Integration: 10-API Automatic Fallback Orchestration",
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 310,
+      "tests": [
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Configuration - should load exactly 10 configuration slots with priority ordering",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Error Classification - should correctly categorize transient vs permanent errors",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Primary Provider Execution - should successfully execute through API_01 when healthy",
+          "status": "passed",
+          "durationMs": 33
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Automatic Failover - should fail over from API_01 to API_02 on transient 503",
+          "status": "passed",
+          "durationMs": 190
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Cooldown State - repeated 429 errors should place provider into cooldown",
+          "status": "passed",
+          "durationMs": 78
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Permanent Errors - should NOT trigger fallback on client bad request",
+          "status": "passed",
+          "durationMs": 1
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Streaming Safety - should safely terminate without duplicate output if mid-stream failure occurs",
+          "status": "passed",
+          "durationMs": 1
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Health Endpoint - GET /api/health/providers should expose sanitized status without secrets",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: 10-API Automatic Fallback Orchestration",
+          "name": "Root Health Endpoint - GET /api/health should include fallback capabilities & summary",
+          "status": "passed",
+          "durationMs": 3
+        }
+      ]
+    },
+    {
+      "name": "Integration: Daily User Limit Enforcement System",
+      "total": 14,
+      "passed": 14,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 4537,
+      "tests": [
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Centralized Configuration - exact limit constants for all 4 plans",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "GET /api/usage - should return safe telemetry with correct defaults",
+          "status": "passed",
+          "durationMs": 326
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Free Tier - should reject message with 429 when daily limit is reached",
+          "status": "passed",
+          "durationMs": 361
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Free Tier - should reject image generation with 429 when 3 images reached",
+          "status": "passed",
+          "durationMs": 361
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Free Tier - should reject web search with 429 when 10 searches reached",
+          "status": "passed",
+          "durationMs": 338
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Free Tier - should reject file upload with 429 when 5 files reached",
+          "status": "passed",
+          "durationMs": 328
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Guest Mode - should enforce strict guest limits (5 msgs, 1 img, 3 searches, 1 file)",
+          "status": "passed",
+          "durationMs": 6
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Pro Tier - allows higher quota (100 msgs, 20 files) when user is upgraded to pro",
+          "status": "passed",
+          "durationMs": 339
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Premium Tier - allows highest quota (300 msgs, 30 imgs, 100 srch, 50 files)",
+          "status": "passed",
+          "durationMs": 488
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Daily UTC Reset - quota refreshes automatically across UTC dates",
+          "status": "passed",
+          "durationMs": 324
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Concurrency Safety - simultaneous requests cannot exceed limit",
+          "status": "passed",
+          "durationMs": 347
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Cross-User Isolation - User A hitting limit does not affect User B",
+          "status": "passed",
+          "durationMs": 661
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Tamper Resistance - client cannot override tier via body or headers",
+          "status": "passed",
+          "durationMs": 316
+        },
+        {
+          "suite": "Integration: Daily User Limit Enforcement System",
+          "name": "Failed Request Accounting - validation 400 does not consume quota",
+          "status": "passed",
+          "durationMs": 342
+        }
+      ]
+    },
+    {
+      "name": "Integration: Subscription & Payment System",
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 770,
+      "tests": [
+        {
+          "suite": "Integration: Subscription & Payment System",
+          "name": "GET /api/subscription/plans - returns official Nexora plans and exact quotas",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Integration: Subscription & Payment System",
+          "name": "POST /api/subscription/create-order - rejects guest mode with 403",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Subscription & Payment System",
+          "name": "POST /api/subscription/create-order - rejects invalid plan IDs",
+          "status": "passed",
+          "durationMs": 347
+        },
+        {
+          "suite": "Integration: Subscription & Payment System",
+          "name": "POST /api/payment/webhook - strictly rejects forged or unsigned payloads",
+          "status": "passed",
+          "durationMs": 7
+        },
+        {
+          "suite": "Integration: Subscription & Payment System",
+          "name": "GET /api/subscription/me - returns user plan and subscription status",
+          "status": "passed",
+          "durationMs": 407
+        }
+      ]
+    },
+    {
+      "name": "Razorpay: Production Configuration Verification",
+      "total": 12,
+      "passed": 12,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 1556,
+      "tests": [
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "1. Razorpay Environment Variables - all 3 required secrets detected without exposure",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "2. Razorpay Server Authentication - successfully authenticates against Razorpay API without charging",
+          "status": "passed",
+          "durationMs": 535
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "3. Plans & Pricing - Plus ₹99, Pro ₹199, Ultra ₹399 validated with exact paise amounts",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "4. Checkout Endpoint - POST /api/subscription/checkout rejects guests and creates verified order",
+          "status": "passed",
+          "durationMs": 383
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "5. Subscription Status - GET /api/subscription and /api/subscription/status return consistent state",
+          "status": "passed",
+          "durationMs": 5
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "6. Webhook Signature Validation - strictly validates HMAC-SHA256 with configured secret",
+          "status": "passed",
+          "durationMs": 12
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "7. Webhook Idempotency - duplicate events are recognized and ignored safely",
+          "status": "passed",
+          "durationMs": 7
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "8. Plan Upgrade on Payment Success - upgrades user to Pro tier with 300 msgs quota",
+          "status": "passed",
+          "durationMs": 15
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "9. Non-Active Subscription States - past_due and expired states do not grant paid limits",
+          "status": "passed",
+          "durationMs": 10
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "10. Daily Limits Server-Authoritative - exact constants match user specifications",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "11. Supabase Synchronization - subscription record correctly saved and retrievable",
+          "status": "passed",
+          "durationMs": 579
+        },
+        {
+          "suite": "Razorpay: Production Configuration Verification",
+          "name": "12. Security - keys and secrets are never returned in client payloads or public endpoints",
+          "status": "passed",
+          "durationMs": 10
+        }
+      ]
+    },
+    {
+      "name": "Integration: Supabase Connection & User Isolation",
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 2052,
+      "tests": [
+        {
+          "suite": "Integration: Supabase Connection & User Isolation",
+          "name": "Supabase Client - status summary should accurately report configuration without leaking secrets",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "Integration: Supabase Connection & User Isolation",
+          "name": "GET /api/health - should report database and Supabase configuration posture securely",
+          "status": "passed",
+          "durationMs": 4
+        },
+        {
+          "suite": "Integration: Supabase Connection & User Isolation",
+          "name": "GET /api/health/database - should provide connectivity diagnostics",
+          "status": "passed",
+          "durationMs": 226
+        },
+        {
+          "suite": "Integration: Supabase Connection & User Isolation",
+          "name": "Supabase Real Test - should verify reachability, schema tables, and isolation posture",
+          "status": "passed",
+          "durationMs": 1822
+        }
+      ]
+    },
+    {
+      "name": "E2E: 10 Comprehensive User Journeys",
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0,
+      "durationMs": 93741,
+      "tests": [
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 1: Onboarding -> Guest Chat -> Register Account -> Login -> Verify Session",
+          "status": "passed",
+          "durationMs": 445
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 2: Multi-Turn Conversation -> Code Structure -> Response Branching",
+          "status": "passed",
+          "durationMs": 328
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 3: Document Upload -> Headings Extraction -> Safe Untrusted Grounding",
+          "status": "passed",
+          "durationMs": 11
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 4: Web Search Grounding Query & Verification",
+          "status": "passed",
+          "durationMs": 89563
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 5: Image Generation -> Aspect Ratio Handling -> Safe Output Validation",
+          "status": "passed",
+          "durationMs": 1358
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 6: Voice Interaction Configuration & Audio State Controls",
+          "status": "passed",
+          "durationMs": 0
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 7: Transparent Memory -> Creation -> Listing -> Isolation -> Deletion",
+          "status": "passed",
+          "durationMs": 806
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 8: Workspaces -> Create Custom Workspace -> Update -> Enforce Boundary -> Delete",
+          "status": "passed",
+          "durationMs": 536
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 9: Data Privacy -> Export JSON Archive -> Clear Data -> Import & Restore",
+          "status": "passed",
+          "durationMs": 690
+        },
+        {
+          "suite": "E2E: 10 Comprehensive User Journeys",
+          "name": "Journey 10: Attack Resilience -> Prompt Injection -> Path Traversal -> Cross-User Tamper",
+          "status": "passed",
+          "durationMs": 4
+        }
+      ]
+    }
+  ]
+}
